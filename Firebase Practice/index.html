@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Databases (Firebase)</title>
+    <style>
+        .container{
+          max-width: 400px;
+        }
+      </style>
+</head>
+<body>
+    <div class="container my-5">
+        <h2>Recipes</h2>
+        <ul>
+          <li>Mushroom pie</li>
+          <li>Veg curry</li>
+        </ul>
+        <form>
+          <label for="recipe">Add a new recipe:</label>
+          <div class="input-group">
+            <input type="text" class="form-control" id="recipe" required>
+            <div class="input-group-append">
+              <input type="submit" value="add" class="btn btn-outline-secondary">
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyBxJJrUOwMizl2ITnLCmItF7QB2L65zUvc",
+    authDomain: "modern-javascript-c788e.firebaseapp.com",
+    projectId: "modern-javascript-c788e",
+    storageBucket: "modern-javascript-c788e.appspot.com",
+    messagingSenderId: "876649622417",
+    appId: "1:876649622417:web:c1448b509191308e2e0830",
+    measurementId: "G-CZN0RXW6RY"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const db = firebase.firestore();  
+</script>
+    <script src = "sandbox.js"></script>
+</body>
+</html>
